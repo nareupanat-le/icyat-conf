@@ -183,6 +183,23 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
 }
 .full-bleed .embed{ border-radius: 0; }
 
+/* 06.x) Footer two-column */
+.site-footer-inner{
+  display: grid;
+  grid-template-columns: 1fr auto;  /* ซ้ายกินที่เหลือ ขวากว้างเท่าข้อความ */
+  align-items: center;
+  gap: 12px;
+}
+.site-footer p{ margin: 0; }        /* ตัด margin เริ่มต้นของ <p> */
+.site-footer .right{ text-align: right; }
+
+@media (max-width:600px){
+  /* มือถือ: วางซ้อนสองบรรทัด แต่ยังชิดซ้าย/ขวาตามต้องการ */
+  .site-footer-inner{ grid-template-columns: 1fr; }
+  .site-footer .right{ text-align: right; }
+}
+
+
 
 /* ========== 07) Pages (grids) ========== */
 /* 07.1) Home / Generic two-column hero */
