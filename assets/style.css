@@ -128,11 +128,12 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
 }
 
 .logo{
-  width:645px; height:260px;
-  object-fit:cover;
-  border-radius:var(--radius);
   display:block;
-  margin:0 auto; /* center horizontally */
+  width: clamp(240px, 80vw, 645px); /* ไม่เกิน 645px และหดตามจอ */
+  max-width:100%;
+  height:auto;                      /* รักษาอัตราส่วนรูป */
+  margin-inline:auto;               /* กลางแนวนอน */
+  border-radius:var(--radius);
 }
 
 
