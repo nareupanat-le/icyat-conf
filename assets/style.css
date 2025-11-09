@@ -127,6 +127,14 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
   margin:0 auto; /* center horizontally */
 }
 
+.logo{
+  width:645px; height:260px;
+  object-fit:cover;
+  border-radius:var(--radius);
+  display:block;
+  margin:0 auto; /* center horizontally */
+}
+
 
 /* ========== 07) Pages ========== */
 /* 07.1) Home (two-column hero) */
