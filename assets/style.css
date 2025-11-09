@@ -136,6 +136,40 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
   border-radius:var(--radius);
 }
 
+/* 06.2) Embeds */
+.embed{
+  position: relative;
+  width: 100%;
+  margin: 16px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #f6f6f6;           /* เฉดพื้นหลังเผื่อโหลดช้า */
+}
+
+/* อัตราส่วน 16:9 เป็นค่าเริ่มต้น ปรับได้ด้วยคลาสเสริม */
+.embed::before{
+  content: "";
+  display: block;
+  padding-top: 56.25%;           /* 16/9 = 56.25% */
+}
+
+.embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ถ้าอยากได้ 4:3 ใส่คลาส .embed--43 ที่ div */
+.embed.embed--43::before{ padding-top: 75%; }
+
+/* ตัวอย่างปรับความสูงแบบเต็มจอมากขึ้นบนเดสก์ท็อป */
+@media (min-width: 900px){
+  .embed--looker::before{ padding-top: 62%; } /* สูงขึ้นนิดให้เห็นกราฟมากขึ้น */
+}
+
+
 
 /* ========== 07) Pages ========== */
 /* 07.1) Home (two-column hero) */
