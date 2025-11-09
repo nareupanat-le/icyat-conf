@@ -187,7 +187,7 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
 .site-footer-inner{
   display: grid;
   grid-template-columns: 1fr auto;  /* ซ้ายกินที่เหลือ ขวากว้างเท่าข้อความ */
-  align-items: center;
+  align-items: baseline;
   gap: 12px;
 }
 .site-footer p{ margin: 0; }        /* ตัด margin เริ่มต้นของ <p> */
