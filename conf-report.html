@@ -1,38 +1,42 @@
 <!doctype html>
-<html lang="th" class="debug">
+<html lang="th">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ICYAT - International Conference of Young Algebraists in Thailand</title>
+  <title>ICYAT — Conference Report</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="/icyat-conf">Home</a>
+  <a class="brand" href="./">Home</a>
   <nav class="nav">
-    <a href="previous-conf.html">Prevous Conferences</a>
+    <a href="previous-conf.html">Previous Conferences</a>
     <a href="conf-report.html">Conference Report</a>
   </nav>
 </header>
 
-<main>
-  <h3 style="text-align:center">Conference Report</h3>
-  <!-- กล่องฝังแบบ responsive -->
-    <div class="embed embed--looker">
-    <iframe 
-        src="https://lookerstudio.google.com/embed/reporting/78bf538d-37e3-46a6-82e2-4c15ddc51f57/page/p_vws5ef04rd" 
-        allowfullscreen
-        loading="lazy"
-        title="ICYAT Conference Report">
-    </iframe>
-    </div>
+<main class="container-xl">
+  <h3>Conference Report (Dashboard)</h3>
 
-    <p class="byline">
-    หากไม่แสดง กดเปิดที่นี่:
-    <a href="https://lookerstudio.google.com/embed/reporting/78bf538d-37e3-46a6-82e2-4c15ddc51f57/page/p_vws5ef04rd" target="_blank" rel="noopener">Open in Looker Studio</a>
-    </p>
+  <!-- ถ้าอยากเต็มขอบจอซ้าย-ขวา ให้ห่อบล็อกนี้ด้วย <section class="full-bleed"> ... </section> -->
+  <div class="embed embed--looker embed--vh">
+    <iframe
+      src="https://lookerstudio.google.com/embed/reporting/REPORT_ID/page/PAGE_ID"
+      allowfullscreen
+      loading="lazy"
+      title="ICYAT Conference Report">
+    </iframe>
+  </div>
+
+  <p class="byline">
+    หากไม่แสดงผล กดเปิดที่นี่:
+    <a href="https://lookerstudio.google.com/reporting/REPORT_ID/page/PAGE_ID" target="_blank" rel="noopener">Open in Looker Studio</a>
+  </p>
 </main>
 
-<footer class="site-footer"><p>© <span id="y"></span> International Conference of Young Algebraists in Thailand</p></footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-</body></html>
+<footer class="site-footer">
+  <p>© <span id="y"></span> International Conference of Young Algebraists in Thailand</p>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -8,10 +8,9 @@
    05) Typography
    06) Components
        06.1) Avatar
-   07) Pages
-       07.1) Home (two-column hero)
-       07.2) CV (equal columns)
-       07.3) CV (25/75 split)
+       06.2) Logo
+       06.3) Embeds (Looker Studio, etc.)
+   07) Pages (grids)
    08) Utilities
    09) Responsive (breakpoints)
    10) Debug Guides (toggle with .debug on <html>)
@@ -22,13 +21,14 @@
 :root{
   /* layout */
   --container: 840px;
+  --container-xl: min(1200px, 96vw);   /* หน้า report ขยายพิเศษ */
   --gap: 24px;
   --radius: 16px;
 
   /* colors */
   --fg: #111;
-  --muted: #7A5C3A;                /* ใช้กับ .byline (คุณตั้งไว้เป็นโทนน้ำตาล) */
-  --link: #7A5C3A;                 /* earth tone */
+  --muted: #7A5C3A;
+  --link: #7A5C3A;
   --link-hover: #61492F;
   --link-visited: #4E3A29;
   --link-underline: rgba(122,92,58,.45);
@@ -49,12 +49,13 @@
 *{ box-sizing: border-box }
 html,body{ margin:0; padding:0 }
 html{
-  -webkit-text-size-adjust: 100%;  /* Safari/iOS */
-  text-size-adjust: 100%;          /* มาตรฐาน */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 body{
   font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans Thai",sans-serif;
   color:var(--fg);
+  background:#fff;
 }
 
 
@@ -64,6 +65,7 @@ body{
   margin:0 auto;
   padding:20px;
 }
+main.container-xl{ max-width: var(--container-xl); } /* ขยายเฉพาะหน้าที่ต้องการ */
 
 
 /* ========== 04) Header & Navigation ========== */
@@ -124,35 +126,34 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
   object-fit:cover;
   border-radius:var(--radius);
   display:block;
-  margin:0 auto; /* center horizontally */
+  margin:0 auto;
 }
 
+/* 06.2) Logo */
 .logo{
   display:block;
-  width: clamp(240px, 80vw, 645px); /* ไม่เกิน 645px และหดตามจอ */
+  width: clamp(240px, 80vw, 645px);
   max-width:100%;
-  height:auto;                      /* รักษาอัตราส่วนรูป */
-  margin-inline:auto;               /* กลางแนวนอน */
+  height:auto;
+  margin-inline:auto;
   border-radius:var(--radius);
 }
 
-/* 06.2) Embeds */
+/* 06.3) Embeds (Looker, Maps, Video, etc.) */
 .embed{
   position: relative;
   width: 100%;
   margin: 16px 0;
   border-radius: var(--radius);
   overflow: hidden;
-  background: #f6f6f6;           /* เฉดพื้นหลังเผื่อโหลดช้า */
+  background: #f6f6f6;
 }
-
-/* อัตราส่วน 16:9 เป็นค่าเริ่มต้น ปรับได้ด้วยคลาสเสริม */
+/* ค่าเริ่มต้น 16:9 (ถ้าไม่ได้ใช้โหมด vh) */
 .embed::before{
   content: "";
   display: block;
-  padding-top: 56.25%;           /* 16/9 = 56.25% */
+  padding-top: 56.25%;
 }
-
 .embed iframe{
   position: absolute;
   inset: 0;
@@ -160,19 +161,31 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
   height: 100%;
   border: 0;
 }
-
-/* ถ้าอยากได้ 4:3 ใส่คลาส .embed--43 ที่ div */
+/* 4:3 ตัวเลือก */
 .embed.embed--43::before{ padding-top: 75%; }
-
-/* ตัวอย่างปรับความสูงแบบเต็มจอมากขึ้นบนเดสก์ท็อป */
+/* สูงเต็มตาขึ้นบนเดสก์ท็อปเล็กน้อย (เฉพาะ Looker) */
 @media (min-width: 900px){
-  .embed--looker::before{ padding-top: 62%; } /* สูงขึ้นนิดให้เห็นกราฟมากขึ้น */
+  .embed--looker::before{ padding-top: 62%; }
+}
+/* โหมดตามความสูงจอ (แนะนำสำหรับ Looker) */
+.embed--vh::before{ display:none; }
+.embed--vh{ height: 70vh; height: 70dvh; }
+@media (max-width: 600px){
+  .embed--vh{ height: 60vh; height: 60dvh; }
 }
 
+/* Full-bleed section (ชนขอบจอซ้าย-ขวา เฉพาะบล็อก) */
+.full-bleed{
+  position: relative;
+  left: 50%; right: 50%;
+  margin-left: -50vw; margin-right: -50vw;
+  width: 100vw;
+}
+.full-bleed .embed{ border-radius: 0; }
 
 
-/* ========== 07) Pages ========== */
-/* 07.1) Home (two-column hero) */
+/* ========== 07) Pages (grids) ========== */
+/* 07.1) Home / Generic two-column hero */
 .two-col{
   display:grid;
   grid-template-columns:minmax(0,1.2fr) minmax(0,0.8fr);
@@ -180,39 +193,30 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
   align-items:start;
 }
 .two-col .col-text, .two-col .col-photo{ min-width:0 }
-.col-text{ max-width:65ch }          /* ความกว้างบรรทัดอ่านสบาย */
-.col-photo{ align-self:center }      /* กลางแนวตั้งคอลัมน์ขวา */
+.col-text{ max-width:65ch }
+.col-photo{ align-self:center }
 
-/* 07.2) CV (equal columns) */
+/* 07.2) Equal columns */
 .two-col--equal{ grid-template-columns:1fr 1fr }
 .two-col--equal .col-text{ max-width:none }
 
-/* 07.3) CV (25/75 split) */
+/* 07.3) 25/75 split */
 .two-col--25-75{ grid-template-columns:minmax(0,0.5fr) minmax(0,1.5fr) }
 .two-col--25-75 .col-text{ max-width:none }
-/* --- ให้บาง section คง 2 คอลัมน์แม้จอเล็ก --- */
-.two-col.stay-2col { /* desktop ใช้ layout เดิม */
-  grid-template-columns: minmax(0,0.5fr) minmax(0,1.5fr);
-}
-/* จัด layout แบบกะทัดรัดสำหรับรายการปี-สถานที่ */
-.two-col.stay-2col.timeline{
-  grid-template-columns: max-content 1fr; /* คอลัมน์ซ้ายกว้างเท่าข้อความ */
-  column-gap: 3ch;                        /* ระยะห่าง ~ 3 space */
-  row-gap: 8px;                           /* ระยะห่างแนวตั้งพออ่านสบาย */
-}
 
-/* มือถือ: คงสองคอลัมน์ไว้ และยังห่าง ~ 3 space */
+/* กริดแบบไทม์ไลน์ ปี—รายละเอียด (กระทัดรัด) */
+.two-col.stay-2col{ grid-template-columns: minmax(0,0.5fr) minmax(0,1.5fr); }
+.two-col.stay-2col.timeline{
+  grid-template-columns: max-content 1fr;
+  column-gap: 3ch;  /* ≈ 3 space */
+  row-gap: 8px;
+}
 @media (max-width:600px){
   .two-col.stay-2col.timeline{
-    grid-template-columns: 8ch 1fr;  /* เผื่อปี 4–5 หลัก + ระยะขอบนิดหน่อย */
+    grid-template-columns: 8ch 1fr;
     column-gap: 3ch;
   }
 }
-
-
-/* Publications list */
-.pubs{ margin:12px 0 0; padding-left:1.5rem; }
-.pubs li{ margin:10px 0; }
 
 
 /* ========== 08) Utilities ========== */
@@ -221,28 +225,27 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
 .text-right{ text-align:right }
 .text-left{ text-align:left }
 .text-center{ text-align:center }
-.items-start{ align-items:start !important }              /* ใช้กับ .two-col */
-.two-col > * > :first-child{ margin-top:0 }               /* ชิดบนจริงของบล็อกแรก */
+.items-start{ align-items:start !important }
+.two-col > * > :first-child{ margin-top:0 }
 .center-x{ display:flex; flex-direction:column; align-items:center }
 .list-tight{ margin-top:6px; margin-bottom:0 }
 .list-tight li{ margin:2px 0 }
+
 /* multi-column list */
 .list-cols-2{
-  column-count: 2;              /* = ทำ 2 คอลัมน์เท่ากัน */
-  column-gap: var(--gap);       /* ระยะห่างระหว่างคอลัมน์ */
-  column-fill: balance;         /* กระจายน้ำหนักให้สูงพอ ๆ กัน */
+  column-count: 2;
+  column-gap: var(--gap);
+  column-fill: balance;
 }
 .list-cols-2 li{
-  break-inside: avoid;          /* อย่าให้รายการแตกคอลัมน์กลางคัน */
+  break-inside: avoid;
   -webkit-column-break-inside: avoid;
-  margin: 4px 0;                /* เว้นรายการแต่ละบรรทัดนิดหน่อย */
+  margin: 4px 0;
 }
-.list-cols-2 a{
-  overflow-wrap: anywhere;      /* ชื่อวารสารยาว ๆ จะตัดคำได้ ไม่ล้นคอลัมน์ */
-}
+.list-cols-2 a{ overflow-wrap: anywhere; }
 
 @media (max-width: 700px){
-  .list-cols-2{ column-count: 1; }  /* มือถือกลับเป็นคอลัมน์เดียว อ่านง่าย */
+  .list-cols-2{ column-count: 1; }
 }
 
 
@@ -251,42 +254,20 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
   .two-col{ grid-template-columns:1fr }
   .col-photo{ align-self:start }
   .avatar{ width:200px; height:200px }
-  .text-right{ text-align:left }       /* มือถือให้อ่านง่าย */
+  .text-right{ text-align:left }
   .two-col--equal,
   .two-col--25-75{ grid-template-columns:1fr }
 }
 
-@media (max-width:600px){
-  /* ค่าพื้นฐาน: ทุก .two-col เป็นคอลัมน์เดียว */
-  .two-col{ grid-template-columns: 1fr; }
-  .col-photo{ align-self:start }
-  .avatar{ width:200px; height:200px }
-
-  /* ตัวช่วยการอ่านทั่วไป */
-  .text-right{ text-align:left }       
-  .two-col--equal,
-  .two-col--25-75{ grid-template-columns: 1fr; }
-
-  /* === ข้อยกเว้น: section ที่ติด .stay-2col ให้ยังคง 2 คอลัมน์บนมือถือ === */
-  .two-col.stay-2col{
-    grid-template-columns: 8ch 1fr;   /* ป้ายซ้ายคงที่ + เนื้อหาขวา */
-    gap: 8px 12px;
-    align-items: start;
-  }
-  .two-col.stay-2col .col-text{ text-align: right; }     
-  .two-col.stay-2col .text-left{ overflow-wrap: anywhere; }
-}
-
-/* มือถือแนวนอน: บังคับฟอนต์สองคอลัมน์ให้เท่ากัน */
+/* มือถือแนวนอน: บังคับฟอนต์ให้เสถียรในกริดพิเศษ */
 @media (max-width: 900px) and (orientation: landscape){
   .two-col.stay-2col .col-text,
   .two-col.stay-2col .text-left,
   .two-col.stay-2col .text-left a{
-    font-size: 1rem;      /* = 16px ตาม body */
+    font-size: 1rem;
     line-height: 1.6;
   }
 }
-
 
 
 /* ========== 10) Debug Guides (toggle with .debug on <html>) ========== */
