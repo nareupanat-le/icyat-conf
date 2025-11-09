@@ -160,6 +160,21 @@ a:focus-visible{ outline: 2px solid var(--link); outline-offset: 2px }
 .two-col.stay-2col { /* desktop ใช้ layout เดิม */
   grid-template-columns: minmax(0,0.5fr) minmax(0,1.5fr);
 }
+/* จัด layout แบบกะทัดรัดสำหรับรายการปี-สถานที่ */
+.two-col.stay-2col.timeline{
+  grid-template-columns: max-content 1fr; /* คอลัมน์ซ้ายกว้างเท่าข้อความ */
+  column-gap: 3ch;                        /* ระยะห่าง ~ 3 space */
+  row-gap: 8px;                           /* ระยะห่างแนวตั้งพออ่านสบาย */
+}
+
+/* มือถือ: คงสองคอลัมน์ไว้ และยังห่าง ~ 3 space */
+@media (max-width:600px){
+  .two-col.stay-2col.timeline{
+    grid-template-columns: 8ch 1fr;  /* เผื่อปี 4–5 หลัก + ระยะขอบนิดหน่อย */
+    column-gap: 3ch;
+  }
+}
+
 
 /* Publications list */
 .pubs{ margin:12px 0 0; padding-left:1.5rem; }
