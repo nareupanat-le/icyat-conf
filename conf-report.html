@@ -1,46 +1,377 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ICYAT — Conference Report</title>
-  <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICYAT — Conference Report</title>
+    
+    <!-- 1. Link CSS เดิมของเว็บไซต์อาจารย์ เพื่อให้ฟอนต์และธีมตรงกัน -->
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <!-- 2. Tailwind CSS (สำหรับจัด Layout Dashboard สวยๆ) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 3. Google Charts & Icons -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Override Tailwind conflicts to keep original site style */
+        body { font-family: 'Sarabun', sans-serif; background-color: #f8fafc; margin: 0; }
+        a { text-decoration: none; }
+        
+        /* Dashboard Specific Styles */
+        .chart-container { width: 100%; min-height: 300px; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .select-wrapper { position: relative; }
+        .select-wrapper::after { content: "▼"; font-size: 0.8rem; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #4f46e5; pointer-events: none; }
+
+        /* Ensure Tailwind doesn't break original Header */
+        .site-header { position: sticky; top: 0; z-index: 50; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    </style>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="./">Home</a>
-  <nav class="nav">
-    <a href="previous-conf.html">Previous Conferences</a>
-    <a href="conf-report.html">Conference Report</a>
-    <a href="conf-anou.html">Conferences Announcements</a>
-  </nav>
-</header>
 
-<main class="container-xl">
-  <h3>Conference Report (Dashboard)</h3>
+    <!-- ========================================= -->
+    <!-- ส่วนที่ 1: Header เมนูเดิมของเว็บไซต์อาจารย์ -->
+    <!-- ========================================= -->
+    <header class="site-header">
+        <a class="brand" href="./">Home</a>
+        <nav class="nav">
+            <a href="previous-conf.html">Previous Conferences</a>
+            <a href="conf-report.html">Conference Report</a>
+            <a href="conf-anou.html">Conferences Announcements</a>
+        </nav>
+    </header>
 
-  <!-- ถ้าอยากเต็มขอบจอซ้าย-ขวา ให้ห่อบล็อกนี้ด้วย <section class="full-bleed"> ... </section> -->
-  <div class="embed embed--looker embed--vh">
-    <iframe
-      src="https://lookerstudio.google.com/embed/reporting/78bf538d-37e3-46a6-82e2-4c15ddc51f57/page/p_vws5ef04rd"
-      allowfullscreen
-      loading="lazy"
-      title="ICYAT Conference Report">
-    </iframe>
-  </div>
+    <!-- ========================================= -->
+    <!-- ส่วนที่ 2: Dashboard Control Bar (ส่วนควบคุม) -->
+    <!-- ========================================= -->
+    <div class="bg-indigo-50 border-b border-indigo-100 shadow-sm sticky top-[60px] z-40">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="bg-indigo-600 text-white p-2 rounded-lg shadow">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-gray-800 leading-tight">Conference Dashboard</h1>
+                        <p class="text-xs text-gray-500">Real-time Analytics</p>
+                    </div>
+                </div>
 
-  <p class="byline">
-    If the content is not displaying correctly, please click here:
-    <a href="https://lookerstudio.google.com/embed/reporting/78bf538d-37e3-46a6-82e2-4c15ddc51f57/page/p_vws5ef04rd" target="_blank" rel="noopener">Open in Looker Studio</a>
-  </p>
-</main>
+                <div class="flex items-center gap-3 w-full md:w-auto">
+                    <div class="select-wrapper w-full md:w-48">
+                        <select id="year-select" onchange="handleYearChange()" class="w-full appearance-none bg-white border border-indigo-200 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2 font-semibold shadow-sm cursor-pointer">
+                            <option value="All">📊 All Years (Overview)</option>
+                        </select>
+                    </div>
+                    <button onclick="fetchDataFromGoogleSheet()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition flex items-center gap-2" title="Refresh data">
+                        <i class="fa-solid fa-arrows-rotate"></i> <span class="hidden sm:inline">Refresh</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <p>© <span id="y"></span> International Conference of Young Algebraists in Thailand</p>
-    <p class="right">cyat.th[at]gmail[dot]com</p>
-  </div>
-</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <!-- ========================================= -->
+    <!-- ส่วนที่ 3: Main Dashboard Content (เนื้อหา) -->
+    <!-- ========================================= -->
+    <main class="container mx-auto p-6 space-y-6">
+        
+        <!-- Status Bar -->
+        <div class="flex justify-between items-end border-b pb-4">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800" id="dashboard-title">Overview Statistics</h2>
+                <p class="text-sm text-gray-500 mt-1">Showing data for: <span id="current-filter-label" class="font-semibold text-indigo-600">All Years</span></p>
+            </div>
+            <div class="text-right flex flex-col items-end">
+                <span class="text-xs font-semibold bg-green-100 text-green-800 px-2.5 py-0.5 rounded border border-green-200">
+                    <i class="fa-solid fa-database mr-1"></i> Loaded: <span id="total-records">0</span> records
+                </span>
+                <span class="text-[10px] text-gray-400 mt-1" id="data-source-label">Source: Initial Data</span>
+            </div>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+                <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Total Participants</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-participants">0</h3></div>
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-lg"><i class="fa-solid fa-users text-xl"></i></div>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+                <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Unique Countries</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-countries">0</h3></div>
+                <div class="p-3 bg-green-50 text-green-600 rounded-lg"><i class="fa-solid fa-earth-americas text-xl"></i></div>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+                <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Speakers (Talk)</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-talks">0</h3></div>
+                <div class="p-3 bg-yellow-50 text-yellow-600 rounded-lg"><i class="fa-solid fa-microphone-lines text-xl"></i></div>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+                <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Keynote Speakers</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-keynotes">0</h3></div>
+                <div class="p-3 bg-purple-50 text-purple-600 rounded-lg"><i class="fa-solid fa-star text-xl"></i></div>
+            </div>
+        </div>
+
+        <!-- Row 1: Main Trend & Top Affiliations -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 col-span-2">
+                <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-chart-column text-indigo-500"></i> <span id="main-chart-title">Participation Trend</span>
+                </h3>
+                <div id="main_chart_div" class="chart-container"></div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 col-span-1">
+                <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-building-columns text-orange-500"></i> Top Participating Units
+                </h3>
+                <div id="affil_chart_div" class="chart-container"></div>
+            </div>
+        </div>
+
+        <!-- Row 2: Status, Map, Table -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Pie Chart -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-id-card text-blue-500"></i> Participant Status
+                </h3>
+                <div id="pie_chart_div" class="chart-container" style="height: 300px;"></div>
+            </div>
+
+            <!-- Map -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-green-500"></i> Global Reach
+                </h3>
+                <div id="geo_chart_div" class="chart-container" style="height: 300px;"></div>
+            </div>
+
+            <!-- Keynote Table -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-[380px]">
+                <h3 class="text-lg font-bold text-gray-700 mb-4 flex justify-between items-center">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-list text-gray-500"></i> Keynote Speakers</span>
+                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full" id="table-count">0 found</span>
+                </h3>
+                <div class="overflow-y-auto custom-scrollbar flex-grow border rounded-lg">
+                    <table class="min-w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0 shadow-sm z-10">
+                            <tr>
+                                <th class="px-4 py-3 bg-gray-50">Name</th>
+                                <th class="px-4 py-3 bg-gray-50">Country</th>
+                            </tr>
+                        </thead>
+                        <tbody id="keynote-table-body" class="divide-y divide-gray-100 bg-white"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer เดิมของเว็บไซต์ (Optional: ถ้าต้องการใส่เพิ่ม) -->
+    <footer class="site-footer" style="margin-top: 3rem;">
+        <div class="site-footer-inner text-center">
+             <p>© <span id="y"></span> International Conference of Young Algebraists in Thailand</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition duration-300 flex items-center gap-3 z-50"><i class="fa-solid fa-circle-check text-green-400"></i><span id="toast-msg">Action Completed</span></div>
+
+    <!-- Script Logic -->
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart', 'geochart', 'bar'] });
+        google.charts.setOnLoadCallback(initDashboard);
+
+        // API URL ของอาจารย์
+        const API_URL = "https://script.google.com/macros/s/AKfycbzwZVo1cueAd2DwdlOjRZ4rhhkZZmTKyNWeMZYp3sLC_nfqUEAg7X8eyyDoICpVVhH5/exec"; 
+
+        let rawData = [];
+        let currentYear = 'All';
+
+        // Set Current Year in Footer
+        document.getElementById('y').innerText = new Date().getFullYear();
+
+        // Initial Data (Placeholder)
+        const placeholderData = [
+            {"year": "CYAT 2018", "country": "THA", "status": "Faculty Member", "talk": "Yes", "name": "Passawan Noppakaew", "affiliation": "SU"},
+            {"year": "ICYAT 2023", "country": "UAE", "status": "Keynote Speaker", "talk": "Yes", "name": "Erkko Lehtonen", "affiliation": "Khalifa University"},
+            {"year": "ICYAT 2024", "country": "JPN", "status": "Keynote Speaker", "talk": "Yes", "name": "Akihiro Yamamura", "affiliation": "Akita University"},
+            {"year": "ICYAT 2025", "country": "GER", "status": "Keynote Speaker", "talk": "Yes", "name": "Klaus Denecke", "affiliation": "Potsdam University"},
+             ...Array(15).fill({"year": "CYAT 2018", "country": "THA", "status": "Student", "talk": "Yes", "affiliation": "KKU"}),
+             ...Array(20).fill({"year": "ICYAT 2023", "country": "THA", "status": "Student", "talk": "Yes", "affiliation": "KKU"}),
+             ...Array(25).fill({"year": "ICYAT 2024", "country": "THA", "status": "Student", "talk": "Yes", "affiliation": "RMUTI"}),
+        ];
+
+        function initDashboard() {
+            if (API_URL) {
+                fetchDataFromGoogleSheet(); 
+            } else {
+                rawData = [...placeholderData];
+                refreshUI();
+            }
+        }
+
+        async function fetchDataFromGoogleSheet() {
+            try {
+                document.getElementById('data-source-label').innerText = "Status: Connecting...";
+                const response = await fetch(API_URL);
+                const json = await response.json();
+                
+                if (json && json.length > 0) {
+                    rawData = json;
+                    document.getElementById('data-source-label').innerText = "Source: Google Sheets (Live)";
+                    showToast(`ดึงข้อมูลสำเร็จ! (${json.length} รายการ)`);
+                    refreshUI();
+                }
+            } catch (error) {
+                console.error("API Error:", error);
+                document.getElementById('data-source-label').innerText = "Status: Error";
+                alert("เชื่อมต่อข้อมูลไม่สำเร็จ กรุณาลองใหม่อีกครั้ง");
+            }
+        }
+
+        function refreshUI() {
+            populateYearDropdown();
+            const select = document.getElementById('year-select');
+            if ([...select.options].some(o => o.value === currentYear)) {
+                select.value = currentYear;
+            } else {
+                currentYear = 'All';
+                select.value = 'All';
+            }
+            updateDashboard();
+        }
+
+        function populateYearDropdown() {
+            const select = document.getElementById('year-select');
+            const years = [...new Set(rawData.map(d => d.year))].filter(y => y).sort().reverse(); 
+            select.innerHTML = '<option value="All">📊 All Years (Overview)</option>';
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.innerText = `📅 ${year}`;
+                select.appendChild(option);
+            });
+        }
+
+        function handleYearChange() {
+            currentYear = document.getElementById('year-select').value;
+            updateDashboard();
+        }
+
+        function updateDashboard() {
+            document.getElementById('current-filter-label').innerText = currentYear === 'All' ? 'All Years (Overview)' : currentYear;
+            document.getElementById('total-records').innerText = rawData.length;
+            const filteredData = currentYear === 'All' ? rawData : rawData.filter(d => d.year === currentYear);
+            calculateKPIs(filteredData);
+            drawMainChart(filteredData);
+            drawAffiliationChart(filteredData);
+            drawGeoChart(filteredData);
+            drawPieChart(filteredData);
+            populateKeynoteTable(filteredData);
+        }
+
+        function calculateKPIs(data) {
+            setVal("kpi-participants", data.length);
+            setVal("kpi-countries", [...new Set(data.map(d => d.country))].length);
+            setVal("kpi-talks", data.filter(d => d.talk === 'Yes').length);
+            setVal("kpi-keynotes", data.filter(d => d.status === 'Keynote Speaker').length);
+        }
+        function setVal(id, v) { document.getElementById(id).innerText = v; }
+
+        function drawMainChart(data) {
+            const chartDiv = document.getElementById('main_chart_div');
+            const isOverview = currentYear === 'All';
+            document.getElementById('main-chart-title').innerText = isOverview ? "Yearly Growth" : "Country Breakdown";
+            let dt;
+            const opts = { isStacked: false, animation: { duration: 600, startup: true }, legend: { position: 'top', maxLines: 3 }, bar: { groupWidth: '70%' }, vAxis: { minValue: 0, gridlines: { count: 5 } }, colors: ['#3b82f6', '#10b981', '#f59e0b', '#6366f1'] };
+
+            if (isOverview) {
+                const years = [...new Set(rawData.map(d => d.year))].sort();
+                const rows = [['Year', 'Student', 'Faculty Member', 'Keynote Speaker']];
+                years.forEach(y => {
+                    const d = rawData.filter(x => x.year === y);
+                    rows.push([y, d.filter(x => x.status === 'Student').length, d.filter(x => x.status === 'Faculty Member').length, d.filter(x => x.status === 'Keynote Speaker').length]);
+                });
+                dt = google.visualization.arrayToDataTable(rows);
+            } else {
+                const countries = [...new Set(data.map(d => d.country))];
+                countries.sort((a,b) => data.filter(x=>x.country===b).length - data.filter(x=>x.country===a).length);
+                const rows = [['Country', 'Student', 'Faculty Member', 'Keynote Speaker']];
+                countries.slice(0, 10).forEach(c => {
+                    const d = data.filter(x => x.country === c);
+                    rows.push([c, d.filter(x => x.status === 'Student').length, d.filter(x => x.status === 'Faculty Member').length, d.filter(x => x.status === 'Keynote Speaker').length]);
+                });
+                dt = google.visualization.arrayToDataTable(rows);
+            }
+            new google.visualization.ColumnChart(chartDiv).draw(dt, opts);
+        }
+
+        function drawAffiliationChart(data) {
+            const counts = {};
+            data.forEach(d => {
+                const affil = d.affiliation || "Unknown";
+                counts[affil] = (counts[affil] || 0) + 1;
+            });
+            let sortedAffils = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 5);
+            const rows = [['Institution', 'Participants', { role: 'style' }]];
+            const colors = ['#f97316', '#fb923c', '#fdba74', '#fed7aa', '#ffedd5'];
+            sortedAffils.forEach((item, index) => { rows.push([item[0], item[1], colors[index] || '#cbd5e1']); });
+
+            if (rows.length <= 1) { document.getElementById('affil_chart_div').innerHTML = '<div class="flex items-center justify-center h-full text-gray-400">No affiliation data</div>'; return; }
+            const dt = google.visualization.arrayToDataTable(rows);
+            const opts = { legend: { position: 'none' }, chartArea: { width: '50%', height: '80%' }, hAxis: { minValue: 0 }, bar: { groupWidth: '60%' } };
+            new google.visualization.BarChart(document.getElementById('affil_chart_div')).draw(dt, opts);
+        }
+
+        function drawGeoChart(data) {
+            const counts = {};
+            data.forEach(d => { const c = d.country || d.Country || d.COUNTRY; if(c) counts[c] = (counts[c] || 0) + 1; });
+            const rows = [['Country', 'Participants']];
+            for(const [k,v] of Object.entries(counts)) rows.push([k,v]);
+            if (rows.length <= 1) { document.getElementById('geo_chart_div').innerHTML = '<div class="flex items-center justify-center h-full text-gray-400">No data available for map</div>'; return; }
+            const opts = { colorAxis: {colors: ['#60a5fa', '#1e3a8a']}, legend: 'none', backgroundColor: 'transparent', datalessRegionColor: '#e5e7eb', defaultColor: '#f3f4f6' };
+            new google.visualization.GeoChart(document.getElementById('geo_chart_div')).draw(google.visualization.arrayToDataTable(rows), opts);
+        }
+
+        function drawPieChart(data) {
+            const counts = {};
+            data.forEach(d => { let s = d.status; if(!['Student', 'Faculty Member', 'Keynote Speaker'].includes(s)) s = 'Other'; counts[s] = (counts[s] || 0) + 1; });
+            const rows = [['Status', 'Count']];
+            for(const [k,v] of Object.entries(counts)) rows.push([k,v]);
+            const opts = { pieHole: 0.6, colors: ['#3b82f6', '#10b981', '#f59e0b', '#94a3b8'], chartArea: {width:'90%', height:'80%'}, legend: {position: 'bottom'}, pieSliceText: 'none' };
+            new google.visualization.PieChart(document.getElementById('pie_chart_div')).draw(google.visualization.arrayToDataTable(rows), opts);
+        }
+
+        function populateKeynoteTable(data) {
+            const tbody = document.getElementById('keynote-table-body');
+            tbody.innerHTML = '';
+            const allKeynotes = data.filter(d => d.status === 'Keynote Speaker' && d.name);
+            const uniqueKeynotes = []; const seen = new Set();
+            allKeynotes.forEach(k => { if (!seen.has(k.name)) { seen.add(k.name); uniqueKeynotes.push(k); } });
+            document.getElementById('table-count').innerText = `${uniqueKeynotes.length} found`;
+            if(uniqueKeynotes.length === 0) { tbody.innerHTML = `<tr><td colspan="3" class="px-4 py-8 text-center text-gray-400 italic">No Keynote Speaker data available</td></tr>`; return; }
+            uniqueKeynotes.forEach(k => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-indigo-50 transition duration-150";
+                tr.innerHTML = `<td class="px-4 py-3 font-medium text-gray-900">${k.name}</td><td class="px-4 py-3"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">${k.country}</span></td>`;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 3000);
+        }
+
+        window.addEventListener('resize', () => updateDashboard());
+    </script>
 </body>
 </html>
