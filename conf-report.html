@@ -345,8 +345,26 @@
             const tbody = document.getElementById('keynote-table-body');
             tbody.innerHTML = '';
             
-            // ดึงข้อมูลคนที่มีคำว่า Keynote ในสถานะ (ครอบคลุมเผื่อพิมพ์เล็ก/ใหญ่)
-            const allKeynotes = data.filter(d => d.status && d.status.toLowerCase().includes('keynote'));
+            // 1. ดึงข้อมูลคนที่มีคำว่า Keynote ในสถานะ (ครอบคลุมเผื่อพิมพ์เล็ก/ใหญ่)
+            let allKeynotes = data.filter(d => d.status && d.status.toLowerCase().includes('keynote'));
+            
+            // 2. จัดเรียงตามนามสกุล (คำสุดท้ายของ string `name`)
+            allKeynotes.sort((a, b) => {
+                // แยกคำในชื่อด้วยช่องว่าง และเลือกคำสุดท้ายมาใช้อ้างอิงเป็นนามสกุล
+                const getLastName = (fullName) => {
+                    if (!fullName) return '';
+                    const parts = fullName.trim().split(/\s+/);
+                    return parts[parts.length - 1].toLowerCase();
+                };
+                
+                const lastNameA = getLastName(a.name);
+                const lastNameB = getLastName(b.name);
+                
+                if (lastNameA < lastNameB) return -1;
+                if (lastNameA > lastNameB) return 1;
+                return 0;
+            });
+
             document.getElementById('table-count').innerText = `${allKeynotes.length} found`;
             
             if(allKeynotes.length === 0) { 
@@ -357,8 +375,9 @@
             allKeynotes.forEach(k => {
                 const tr = document.createElement('tr');
                 tr.className = "hover:bg-indigo-50 transition duration-150";
+                // 3. แสดงผลแค่ชื่อและนามสกุล (ไม่แสดง prefix)
                 tr.innerHTML = `
-                    <td class="px-4 py-3 font-medium text-gray-900">${k.prefix !== 'No position' ? k.prefix : ''} ${k.name}</td>
+                    <td class="px-4 py-3 font-medium text-gray-900">${k.name}</td>
                     <td class="px-4 py-3">${k.affiliation}</td>
                     <td class="px-4 py-3"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">${k.country}</span></td>
                 `;
