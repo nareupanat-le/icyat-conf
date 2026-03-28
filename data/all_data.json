@@ -2178,5 +2178,495 @@
     "country": "THA",
     "talk": "Yes",
     "status": "Keynote Speaker"
+  },
+  {
+    "id": "ICYAT2026-001",
+    "year": "ICYAT 2026",
+    "prefix": "Dr.",
+    "name": "Pakorn Palakawong na Ayutthaya",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-002",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Nareupanat Lekkoksung",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-003",
+    "year": "ICYAT 2026",
+    "prefix": "Dr.",
+    "name": "Chadaphorn Kodsueb",
+    "affiliation": "Suranaree University of Technology",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-004",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Anantaya Anantayasethi",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-005",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Thodsaporn Kumduang",
+    "affiliation": "Rajamangala University of Technology Rattanakosin",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-008",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Maliwan Phattarachaleekul",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-009",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Warud Nakkhasen",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-010",
+    "year": "ICYAT 2026",
+    "prefix": "Dr.",
+    "name": "Lyster Rey Cabardo",
+    "affiliation": "Mindanao State University - Iligan Institute of Technology",
+    "country": "PHI",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-011",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Alfian Putra Ardana",
+    "affiliation": "Mataram University",
+    "country": "IDN",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-013",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Thiti Gaketem",
+    "affiliation": "University of Phayao",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-014",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Jatuporn Sanborisoot",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-015",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Rizalyn Bongcawel",
+    "affiliation": "Mindanao State University-Iligan Institute of Technology",
+    "country": "PHI",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-016",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Mikhail Zayn Nasution",
+    "affiliation": "FernUniversität in Hagen",
+    "country": "IDN",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-017",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Patipan Nillaphant",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-019",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Prakash P",
+    "affiliation": "Manipal Institute of Technology, Manipal Academy of Higher Education",
+    "country": "IND",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-021",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Saofee Busaman",
+    "affiliation": "Faculty of Science and Technology Prince of Songkla University, Pattani Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-022",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Kansada Nakwan",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-023",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Siripong Sirisuk",
+    "affiliation": "Thammasat University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-025",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Pattiya Thadathanakiat",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-026",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Pannawit Khamrot",
+    "affiliation": "Rajamangala University of Technology Lanna",
+    "country": "THA",
+    "talk": "No",
+    "status": "Independent Researcher"
+  },
+  {
+    "id": "ICYAT2026-027",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Udom Chotwattakawanit",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-028",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Sukavich Buddaphes",
+    "affiliation": "Thammasat University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-029",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Carl-Fredrik Nyberg-Brodda",
+    "affiliation": "Korea Institute for Advanced Study",
+    "country": "SWE",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-030",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Herolistra Baskoroputro",
+    "affiliation": "University of Indonesia",
+    "country": "IDN",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-031",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Samruam Baupradist",
+    "affiliation": "Chulalongkorn University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-032",
+    "year": "ICYAT 2026",
+    "prefix": "Prof.",
+    "name": "Thawhat Changphas",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-033",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Somnuek Worawiset",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-034",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Bundit Pibaljommee",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-035",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Nuttawoot Nupo",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-036",
+    "year": "ICYAT 2026",
+    "prefix": "Dr.",
+    "name": "Naparat Sripaisan",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-037",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Natthinee Deetae",
+    "affiliation": "Pibulsongkram Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-038",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Pongsaphat Prachumdang",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-039",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Panuwat Luangchaisri",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-040",
+    "year": "ICYAT 2026",
+    "prefix": "Prof. Dr.",
+    "name": "Josef Slapal",
+    "affiliation": "Brno University of Technology",
+    "country": "CZE",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-041",
+    "year": "ICYAT 2026",
+    "prefix": "Dr.",
+    "name": "Ryan Aziz",
+    "affiliation": "Universitas Indonesia",
+    "country": "IDN",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-043",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Sarapee Chairat",
+    "affiliation": "Walailak University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-044",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof",
+    "name": "Tiang Poomsa-ard",
+    "affiliation": "Department of Mathematics Faculty of Science Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Independent Researcher"
+  },
+  {
+    "id": "ICYAT2026-045",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Prakit Jampachon",
+    "affiliation": "Khon Kean University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Independent Researcher"
+  },
+  {
+    "id": "ICYAT2026-046",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Somsak Lekkoksung",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Independent Researcher"
+  },
+  {
+    "id": "ICYAT2026-047",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Napaporn Sarasit",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-048",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof.",
+    "name": "Nagornchat Chansuriya",
+    "affiliation": "King Mongkut of University if Technology North Bangkok, Rayong Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-049",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "Dara Phusanga",
+    "affiliation": "Maejo University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2026-050",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Ontima Pankoon",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-052",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Phongsan Rapprapha",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-053",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Namjai Tiptamoon",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-054",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Supharat Ngaongam",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-055",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Narathip Tipmanee",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-056",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Amonrat Mothongsri",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-057",
+    "year": "ICYAT 2026",
+    "prefix": "No position",
+    "name": "Ketsarawadee Ketwong",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
   }
 ]
