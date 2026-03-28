@@ -15,7 +15,8 @@
     <style>
         body { font-family: 'Sarabun', sans-serif; background-color: #f8fafc; margin: 0; }
         a { text-decoration: none; }
-        .chart-container { width: 100%; min-height: 320px; }
+        /* ใส่ overflow: hidden กันเหนียวไม่ให้กราฟแท่งมหาลัยดันทะลุขอบ */
+        .chart-container { width: 100%; min-height: 320px; overflow: hidden; }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
@@ -115,7 +116,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-graduation-cap text-green-500"></i> Academic Profile
+                    <i id="dynamic_academic_icon" class="fa-solid fa-graduation-cap text-green-500"></i> 
+                    <span id="dynamic_academic_title">Academic Profile</span>
                 </h3>
                 <div id="academic_chart_div" class="chart-container"></div>
             </div>
@@ -215,16 +217,28 @@
             calculateKPIs(filteredData);
             drawStatusChart(filteredData);
             drawRoleChart(filteredData);
-            drawAcademicProfileChart(filteredData);
             drawAffiliationChart(filteredData);
 
+            // เงื่อนไขสลับกราฟ Academic Profile / Retention และ Trend / Keynote
             if (currentYear === 'All') {
                 document.getElementById('trend_section').classList.remove('hidden-section');
                 document.getElementById('keynote_section').classList.add('hidden-section');
+                
+                // สลับ Title และ Icon เป็น Retention
+                document.getElementById('dynamic_academic_title').innerText = 'Participant Retention';
+                document.getElementById('dynamic_academic_icon').className = 'fa-solid fa-users-arrows-turn-right text-purple-500';
+                
+                drawRetentionChart();
                 drawTrendChart();
             } else {
                 document.getElementById('trend_section').classList.add('hidden-section');
                 document.getElementById('keynote_section').classList.remove('hidden-section');
+                
+                // สลับ Title และ Icon กลับเป็น Academic Profile
+                document.getElementById('dynamic_academic_title').innerText = 'Academic Profile';
+                document.getElementById('dynamic_academic_icon').className = 'fa-solid fa-graduation-cap text-green-500';
+                
+                drawAcademicProfileChart(filteredData);
                 populateKeynoteTable(filteredData);
             }
         }
@@ -260,17 +274,46 @@
             new google.visualization.PieChart(document.getElementById('role_chart_div')).draw(google.visualization.arrayToDataTable(rows), opts);
         }
 
+        // ฟังก์ชันใหม่: วาดกราฟ Retention สำหรับหน้า All Years
+        function drawRetentionChart() {
+            const nameCounts = {};
+            // นับชื่อซ้ำจาก rawData ทั้งหมด
+            rawData.forEach(d => {
+                const name = d.name ? d.name.trim().toLowerCase() : '';
+                if(name) nameCounts[name] = (nameCounts[name] || 0) + 1;
+            });
+
+            let oneTime = 0;
+            let returning = 0;
+            for (let name in nameCounts) {
+                if (nameCounts[name] > 1) returning++;
+                else oneTime++;
+            }
+
+            const rows = [
+                ['Type', 'Count'],
+                ['1 Year (New/One-time)', oneTime],
+                ['2+ Years (Returning)', returning]
+            ];
+
+            const dt = google.visualization.arrayToDataTable(rows);
+            const opts = { 
+                pieHole: 0.5, 
+                colors: ['#cbd5e1', '#8b5cf6'], // สีเทา(มาครั้งเดียว) กับ สีม่วง(กลับมาอีก)
+                chartArea: {width:'90%', height:'80%'}, 
+                legend: {position: 'bottom'} 
+            };
+            new google.visualization.PieChart(document.getElementById('academic_chart_div')).draw(dt, opts);
+        }
+
         function drawAcademicProfileChart(data) {
-            // เอา 'Dr.' ออกจากโครงสร้าง
             const counts = { 'Professor': 0, 'Assoc. Prof.': 0, 'Asst. Prof.': 0, 'Student/Other': 0 };
             
             data.forEach(d => {
                 const p = (d.prefix || '').toLowerCase();
-                // จัดกลุ่มเฉพาะตำแหน่งทางวิชาการเท่านั้น
                 if (p.includes('assoc')) counts['Assoc. Prof.']++;
                 else if (p.includes('asst')) counts['Asst. Prof.']++;
                 else if (p.includes('prof')) counts['Professor']++;
-                // คนที่มีวุฒิ Dr., Mr., Ms. หรือไม่มี จะถูกนับรวมใน Student/Other
                 else counts['Student/Other']++;
             });
 
@@ -307,9 +350,10 @@
             if (rows.length <= 1) { document.getElementById('affil_chart_div').innerHTML = '<div class="flex items-center justify-center h-full text-gray-400">No affiliation data</div>'; return; }
             
             const dt = google.visualization.arrayToDataTable(rows);
+            // ล็อกพื้นที่ด้านซ้ายไว้ 35% เพื่อไม่ให้ชื่อมหาลัยดันกราฟจนล้น
             const opts = { 
                 legend: { position: 'none' }, 
-                chartArea: { width: '45%', height: '85%' }, 
+                chartArea: { left: '35%', width: '60%', height: '85%' }, 
                 hAxis: { minValue: 0 }, 
                 bar: { groupWidth: '70%' },
                 animation: { duration: 500, startup: true }
@@ -379,7 +423,10 @@
             });
         }
 
-        window.addEventListener('resize', () => updateDashboard());
+        window.addEventListener('resize', () => {
+            clearTimeout(window.resizeTimer);
+            window.resizeTimer = setTimeout(() => updateDashboard(), 200);
+        });
     </script>
 </body>
 </html>
