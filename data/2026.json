@@ -340,16 +340,6 @@
     "status": "Keynote Speaker"
   },
   {
-    "id": "ICYAT2026-041",
-    "year": "ICYAT 2026",
-    "prefix": "Dr.",
-    "name": "Ryan Aziz",
-    "affiliation": "Universitas Indonesia",
-    "country": "IDN",
-    "talk": "Yes",
-    "status": "Faculty Member"
-  },
-  {
     "id": "ICYAT2026-043",
     "year": "ICYAT 2026",
     "prefix": "Assoc. Prof. Dr.",
@@ -425,16 +415,6 @@
     "prefix": "No position",
     "name": "Ontima Pankoon",
     "affiliation": "Khon Kaen University",
-    "country": "THA",
-    "talk": "No",
-    "status": "Student"
-  },
-  {
-    "id": "ICYAT2026-052",
-    "year": "ICYAT 2026",
-    "prefix": "No position",
-    "name": "Phongsan Rapprapha",
-    "affiliation": "Mahasarakham University",
     "country": "THA",
     "talk": "No",
     "status": "Student"
