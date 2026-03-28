@@ -215,7 +215,7 @@
             calculateKPIs(filteredData);
             drawStatusChart(filteredData);
             drawRoleChart(filteredData);
-            drawGeoChart(filteredData);
+            drawAcademicProfileChart(filteredData);
             drawAffiliationChart(filteredData);
 
             // Conditional Display: Trend vs Keynote Table
@@ -316,25 +316,6 @@
                 bar: { groupWidth: '70%' },
                 animation: { duration: 500, startup: true }
             };
-            new google.visualization.BarChart(document.getElementById('affil_chart_div')).draw(dt, opts);
-        }
-
-        function drawAffiliationChart(data) {
-            const counts = {};
-            data.forEach(d => {
-                const affil = d.affiliation;
-                if (affil && affil.toLowerCase() !== 'unknown') counts[affil] = (counts[affil] || 0) + 1;
-            });
-            let sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 5);
-            
-            const rows = [['Institution', 'Participants', { role: 'style' }]];
-            const colors = ['#f97316', '#fb923c', '#fdba74', '#fed7aa', '#ffedd5'];
-            sorted.forEach((item, index) => { rows.push([item[0], item[1], colors[index] || '#cbd5e1']); });
-
-            if (rows.length <= 1) { document.getElementById('affil_chart_div').innerHTML = '<div class="flex items-center justify-center h-full text-gray-400">No affiliation data</div>'; return; }
-            
-            const dt = google.visualization.arrayToDataTable(rows);
-            const opts = { legend: { position: 'none' }, chartArea: { width: '50%', height: '80%' }, hAxis: { minValue: 0 }, bar: { groupWidth: '60%' } };
             new google.visualization.BarChart(document.getElementById('affil_chart_div')).draw(dt, opts);
         }
 
