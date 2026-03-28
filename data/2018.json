@@ -1,0 +1,532 @@
+[
+  {
+    "id": "cyat_2018_1",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Passawan Noppakaew",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_2",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Dara Phusanga",
+    "affiliation": "Maejo University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_3",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Prapakorn Yoddee",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_4",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Khwancheewa Wattanatripop",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_5",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Warud Nakkhasen",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_6",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Pongsakorn Kitpratyakul",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_7",
+    "year": "CYAT 2018",
+    "prefix": "Associate Professor",
+    "name": "Thawhat Changphas",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_8",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Patchara Pornsurat",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_9",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Panuwat Luangchaisri",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_10",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Kanruethai Jeenkaew",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_11",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Akarawith Laothongsarn",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_12",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Julaluk Boonsol",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_13",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Natthaya Boonyam",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_14",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Pakorn Palakawong na Ayutthaya",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_15",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Jedsada Senasukh",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_16",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Weerapong Wongpinit",
+    "affiliation": "Mahasarakham Rajabhat University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_17",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Ananya Anantayasethi",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_18",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Thodsaporn Kumduang",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_19",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Dawan Chumpungam",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_20",
+    "year": "CYAT 2018",
+    "prefix": "Associate Professor",
+    "name": "Wonlop Hemvong",
+    "affiliation": "Udon Thani Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_21",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Apichai Panpa",
+    "affiliation": "Udon Thani Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_22",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Wattapong Puninagool",
+    "affiliation": "Udon Thani Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_23",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Bancha Nanjaras",
+    "affiliation": "Mahasarakham Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_24",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Sujin Sukgumpapan",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_25",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Nareupanat Lekkoksung",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_26",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Phurinut Srisawad",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_27",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Prisayarat Sangapate",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_28",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Ratana Srithus",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_29",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Worakrit Supaporn",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_30",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Preeyanuch Honyam",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_31",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Pisan Summaprab",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_32",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Winyoo Samomorp",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_33",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Jirapong Mekwian",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_34",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Hataikhan Sanpan",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_35",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Somsak Lekkoksung",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_36",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Saofee Busaman",
+    "affiliation": "Prince of Songkla University, Pattani Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_37",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Aveya Charoenpol",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_38",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Udom Chotwattakawanit",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_39",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Laddawan Lohapan",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_40",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Napaporn Sarasit",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_41",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Prakit Jampachon",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_42",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Bundit Pibaljommee",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_43",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Nuthawud Sungtong",
+    "affiliation": "Rajamangala University of Technology Lanna",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_44",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Somnuek Worawiset",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_45",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Nagornchat Chansuriya",
+    "affiliation": "King Mongkut's University of Technology North Bangkok, Rayong Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_46",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Ampika Boonmee",
+    "affiliation": "Kasetsart University, Sriracha Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_47",
+    "year": "CYAT 2018",
+    "prefix": "Assistant Professor",
+    "name": "Sarawut Phuapong",
+    "affiliation": "Rajamangala University of Technology Lanna",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_48",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Jenjira Puiwong",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "cyat_2018_49",
+    "year": "CYAT 2018",
+    "prefix": "No position",
+    "name": "Kittisak Tinpun",
+    "affiliation": "Prince of Songkla University, Pattani Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_50",
+    "year": "CYAT 2018",
+    "prefix": "Associate Professor",
+    "name": "Sorasak Leeratanavalee",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "cyat_2018_51",
+    "year": "CYAT 2018",
+    "prefix": "Professor",
+    "name": "Klaus Denecke",
+    "affiliation": "University of Potsdam",
+    "country": "GER",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  },
+  {
+    "id": "cyat_2018_52",
+    "year": "CYAT 2018",
+    "prefix": "Professor",
+    "name": "Chawewan Ratanaprasert",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  },
+  {
+    "id": "cyat_2018_53",
+    "year": "CYAT 2018",
+    "prefix": "Associate Professor",
+    "name": "Tiang Poomsa-ard",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  }
+]

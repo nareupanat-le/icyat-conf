@@ -1,0 +1,622 @@
+[
+  {
+    "id": "icyat_2024_1",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Nuttapong Wattanasiripong",
+    "affiliation": "Valaya Alongkorn Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_2",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Prisayarat Sangapate",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_3",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Thiti Gaketem",
+    "affiliation": "University of Phayao",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_4",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Kanrop Hukaew",
+    "affiliation": "Chulalongkorn University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_5",
+    "year": "ICYAT 2024",
+    "prefix": "Associate Professor",
+    "name": "Samruam Baupradist",
+    "affiliation": "Chulalongkorn University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_6",
+    "year": "ICYAT 2024",
+    "prefix": "Associate Professor",
+    "name": "Somnuek Worawiset",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_7",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Krittika Linesawat",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_8",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Napaporn Sarasit",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_9",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Nareupanat Lekkoksung",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_10",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Jatuporn Sanborisoot",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_11",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Ananya Anantayasethi",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_12",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Hataikhan Sanpan",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_13",
+    "year": "ICYAT 2024",
+    "prefix": "Associate Professor",
+    "name": "Somsak Lekkoksung",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_14",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Aveya Chaloenpol",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_15",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Udom Chotwattakawanit",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_16",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Pakorn Palakawong na Ayutthaya",
+    "affiliation": "Independent Researcher",
+    "country": "THA",
+    "talk": "No",
+    "status": "Non-student"
+  },
+  {
+    "id": "icyat_2024_17",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Pongpat Sittitrai",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Non-student"
+  },
+  {
+    "id": "icyat_2024_18",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Saofee Busaman",
+    "affiliation": "Prince of Songkla University, Pattani Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_19",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Pattarawan Singavananda",
+    "affiliation": "Surat Thani Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_20",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Saranya Hangsawat",
+    "affiliation": "Surat Thani Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_21",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Adisak Denphetnong",
+    "affiliation": "Surat Thani Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_22",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Nuchanat Tiprachot",
+    "affiliation": "Independent Researcher",
+    "country": "THA",
+    "talk": "No",
+    "status": "Non-student"
+  },
+  {
+    "id": "icyat_2024_23",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Thodsaporn Kumduang",
+    "affiliation": "Rajamangala University of Technology Rattanakosin",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_24",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Issaraporn Khonchaiyaphum",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_25",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Supaporn Theesoongnern",
+    "affiliation": "Thammasat University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_26",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Perawit Boonsomchua",
+    "affiliation": "Darunsikkhalai School",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_27",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Pisan Summaprab",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_28",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Nuttapon Chaiduangsri",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_29",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Kittisak Saensura",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_30",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Maliwan Phattarachaleekul",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_31",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Thanakorn Prinyasart",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_32",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Warud Nakkhasen",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_33",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Montakarn Petapirak",
+    "affiliation": "Prince of Songkla University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_34",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Amornrat Rattana",
+    "affiliation": "Prince of Songkla University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_35",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Sawinee Srikwa",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_36",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Apichai Panpa",
+    "affiliation": "Udon Thani Rajabhat University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_37",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Shawanwit Poomsa-ad",
+    "affiliation": "Independent Researcher",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Non-student"
+  },
+  {
+    "id": "icyat_2024_38",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Kiitsak Tinpun",
+    "affiliation": "Prince of Songkla University, Pattani Campus",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_39",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Jirajus Tangtragoon",
+    "affiliation": "Mahasarakham University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_40",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Anak Nongmanee",
+    "affiliation": "Nakhon Sawan Rajabhat University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_41",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Jaluluk Boonsol",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_42",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Tanapat Chalarux",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_43",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Panuwat Luangchaisri",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_44",
+    "year": "ICYAT 2024",
+    "prefix": "Associate Professor",
+    "name": "Bundit Pibaljommee",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_45",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Nagornchat Chansuriya",
+    "affiliation": "King Mongkut's University of Technology North Bangkok, Rayong Campus",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_46",
+    "year": "ICYAT 2024",
+    "prefix": "Professor",
+    "name": "Thawhat Changphas",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_47",
+    "year": "ICYAT 2024",
+    "prefix": "Professor",
+    "name": "Sorasak Leeratanavalee",
+    "affiliation": "Chiang Mai University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_48",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Kansada Nakwan",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_49",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Pongsaphat Prachumdang",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Student"
+  },
+  {
+    "id": "icyat_2024_50",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Prakit Jampachon",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Retirement"
+  },
+  {
+    "id": "icyat_2024_51",
+    "year": "ICYAT 2024",
+    "prefix": "Associate Professor",
+    "name": "Jittisak Rakbud",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_52",
+    "year": "ICYAT 2024",
+    "prefix": "Associate Professor",
+    "name": "Tiang Poomsa-ard",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Retirement"
+  },
+  {
+    "id": "icyat_2024_53",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Worakrit Supaporn",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_54",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Tiwadee Musunthia",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_55",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Jirapong Mekwian",
+    "affiliation": "Rajamangala University of Technology Isan, Khon Kaen Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_56",
+    "year": "ICYAT 2024",
+    "prefix": "No position",
+    "name": "Wannapol Pimpasalee",
+    "affiliation": "Kalasin University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "icyat_2024_57",
+    "year": "ICYAT 2024",
+    "prefix": "Professor",
+    "name": "Chaweewan Ratanaprasert",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Retirement"
+  },
+  {
+    "id": "icyat_2024_58",
+    "year": "ICYAT 2024",
+    "prefix": "Associate Professor",
+    "name": "Paibool Ratanaprasert",
+    "affiliation": "Silpakorn University, Sanam Chandra Palace Campus",
+    "country": "THA",
+    "talk": "No",
+    "status": "Retirement"
+  },
+  {
+    "id": "icyat_2024_59",
+    "year": "ICYAT 2024",
+    "prefix": "Professor",
+    "name": "Klaus Denecke",
+    "affiliation": "University of Potsdam",
+    "country": "GER",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  },
+  {
+    "id": "icyat_2024_60",
+    "year": "ICYAT 2024",
+    "prefix": "Professor",
+    "name": "Josef Slapal",
+    "affiliation": "Brno University of Technology",
+    "country": "CZE",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  },
+  {
+    "id": "icyat_2024_61",
+    "year": "ICYAT 2024",
+    "prefix": "Professor",
+    "name": "Akihiro Yamamura",
+    "affiliation": "Akita University",
+    "country": "JPN",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  },
+  {
+    "id": "icyat_2024_62",
+    "year": "ICYAT 2024",
+    "prefix": "Assistant Professor",
+    "name": "Erkko Lehtonen",
+    "affiliation": "Khalifa University",
+    "country": "FIN",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  }
+]
