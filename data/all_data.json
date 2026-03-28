@@ -2437,7 +2437,7 @@
     "affiliation": "Khon Kaen University",
     "country": "THA",
     "talk": "No",
-    "status": "Faculty Member"
+    "status": "Keynote Speaker"
   },
   {
     "id": "ICYAT2026-033",
@@ -2457,7 +2457,7 @@
     "affiliation": "Khon Kaen University",
     "country": "THA",
     "talk": "No",
-    "status": "Faculty Member"
+    "status": "Keynote Speaker"
   },
   {
     "id": "ICYAT2026-035",
@@ -2517,7 +2517,7 @@
     "affiliation": "Brno University of Technology",
     "country": "CZE",
     "talk": "No",
-    "status": "Faculty Member"
+    "status": "Keynote Speaker"
   },
   {
     "id": "ICYAT2026-041",
@@ -2668,5 +2668,35 @@
     "country": "THA",
     "talk": "No",
     "status": "Student"
+  },
+  {
+    "id": "ICYAT2026-058",
+    "year": "ICYAT 2026",
+    "prefix": "Prof. Dr.",
+    "name": "Klaus Denecke",
+    "affiliation": "University of Potsdam",
+    "country": "GER",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  },
+  {
+    "id": "ICYAT2026-059",
+    "year": "ICYAT 2026",
+    "prefix": "Asst. Prof. Dr.",
+    "name": "Erkko Lehtonen",
+    "affiliation": "Khalifa University",
+    "country": "FIN",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
+  },
+  {
+    "id": "ICYAT2026-060",
+    "year": "ICYAT 2026",
+    "prefix": "Assoc. Prof. Dr.",
+    "name": "I Gede Adhitya Wisnu Wardhana",
+    "affiliation": "University of Mataram",
+    "country": "IDN",
+    "talk": "Yes",
+    "status": "Keynote Speaker"
   }
 ]
