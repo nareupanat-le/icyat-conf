@@ -253,7 +253,7 @@
 
         // 1. ฟังก์ชันวาดกราฟโดนัทสถานะ (อัปเดตให้รองรับทั้งข้อมูลเก่าและใหม่)
         function drawStatusChart(data) {
-            const counts = { 'Student': 0, 'Academic & Researcher': 0, 'Other': 0 };
+            const counts = { 'Student': 0, 'Faculty Member & Researcher': 0, 'Other': 0 };
             
             data.forEach(d => {
                 let s = (d.status || '').trim();
@@ -262,7 +262,7 @@
                     counts['Student']++;
                 } else if (['Faculty Member', 'Prof.', 'Assoc. Prof.', 'Asst. Prof.', 'Researcher', 'Independent Researcher', 'Retirement', 'Non-student'].includes(s)) {
                     // มัดรวมอาจารย์ นักวิจัย และผู้เกษียณอายุ (ข้อมูลเก่าและใหม่) ไว้ด้วยกัน
-                    counts['Academic & Researcher']++;
+                    counts['Faculty Member & Researcher']++;
                 } else {
                     // ส่วนที่เหลือเช่น Keynote Speaker, Invited Speaker จะมาตกที่นี่
                     counts['Other']++;
@@ -272,7 +272,7 @@
             const rows = [
                 ['Status', 'Count'], 
                 ['Student', counts['Student']], 
-                ['Academic & Researcher', counts['Academic & Researcher']], 
+                ['Faculty Member & Researcher', counts['Faculty Member & Researcher']], 
                 ['Other (e.g. Keynote)', counts['Other']]
             ];
             
