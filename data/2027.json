@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ICYAT2027-001",
+    "year": "ICYAT 2027",
+    "prefix": "Dr.",
+    "name": "Pakorn Palakawong na Ayutthaya",
+    "affiliation": "Khon Kaen University",
+    "country": "THA",
+    "talk": "No",
+    "status": "Faculty Member"
+  },
+  {
+    "id": "ICYAT2027-002",
+    "year": "ICYAT 2027",
+    "prefix": "Dr.",
+    "name": "Nareupanat Lekkoksung",
+    "affiliation": "RMUTI KKC",
+    "country": "THA",
+    "talk": "Yes",
+    "status": "Assoc. Prof."
+  },
+  {
+    "id": "ICYAT2027-003",
+    "year": "ICYAT 2027",
+    "prefix": "Ms.",
+    "name": "Nuchanat Tiprachot",
+    "affiliation": "RMUTI KKC",
+    "country": "THA",
+    "talk": "No",
+    "status": "Researcher"
+  }
+]
