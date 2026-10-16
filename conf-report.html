@@ -13,16 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { font-family: 'Sarabun', sans-serif; background-color: #f8fafc; margin: 0; }
+        body { background-color: #fff; margin: 0; }
         a { text-decoration: none; }
         .chart-container { width: 100%; min-height: 320px; overflow: hidden; }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f8f6f3; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d6c7b4; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #b8a692; }
         .select-wrapper { position: relative; }
-        .select-wrapper::after { content: "▼"; font-size: 0.8rem; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #4f46e5; pointer-events: none; }
-        .site-header { position: sticky; top: 0; z-index: 50; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .select-wrapper::after { content: "▼"; font-size: 0.8rem; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #7A5C3A; pointer-events: none; }
+        .site-header { max-width: var(--container-xl); }
+        .nav a.active { font-weight: 700; color: var(--fg); }
         .hidden-section { display: none !important; }
     </style>
 </head>
@@ -37,25 +38,25 @@
         </nav>
     </header>
 
-    <div class="bg-indigo-50 border-b border-indigo-100 shadow-sm sticky top-[60px] z-40">
-        <div class="container mx-auto px-6 py-3">
+    <div class="bg-[#fbf9f6] border-y border-[#ede6dd] shadow-sm sticky top-0 z-40">
+        <div class="max-w-[var(--container-xl)] mx-auto px-6 py-3">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="flex items-center gap-3">
-                    <div class="bg-indigo-600 text-white p-2 rounded-lg shadow">
+                    <div class="bg-[#7A5C3A] text-white p-2 rounded-xl shadow-sm">
                         <i class="fa-solid fa-chart-pie"></i>
                     </div>
                     <div>
                         <h1 class="text-lg font-bold text-gray-800 leading-tight">Conference Dashboard</h1>
-                        <p class="text-xs text-gray-500">Real-time Analytics</p>
+                        <p class="text-xs text-[#7A5C3A]">Analytics &amp; Insights</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3 w-full md:w-auto">
                     <div class="select-wrapper w-full md:w-48">
-                        <select id="year-select" onchange="handleYearChange()" class="w-full appearance-none bg-white border border-indigo-200 text-indigo-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2 font-semibold shadow-sm cursor-pointer">
+                        <select id="year-select" onchange="handleYearChange()" class="w-full appearance-none bg-white border border-[#d6c7b4] text-[#4E3A29] text-sm rounded-xl focus:ring-[#7A5C3A] focus:border-[#7A5C3A] block p-2 font-semibold shadow-sm cursor-pointer">
                             <option value="All">📊 All Years (Overview)</option>
                         </select>
                     </div>
-                    <button onclick="fetchData()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 px-4 rounded-lg shadow transition flex items-center gap-2" title="Refresh data">
+                    <button onclick="fetchData()" class="bg-[#7A5C3A] hover:bg-[#61492F] text-white text-sm font-medium py-2 px-4 rounded-xl shadow-sm transition flex items-center gap-2" title="Refresh data">
                         <i class="fa-solid fa-arrows-rotate"></i> <span class="hidden sm:inline">Refresh</span>
                     </button>
                 </div>
@@ -63,15 +64,15 @@
         </div>
     </div>
 
-    <main class="container mx-auto p-6 space-y-6">
+    <main class="container-xl p-6 space-y-6">
         
-        <div class="flex justify-between items-end border-b pb-4">
+        <div class="flex justify-between items-end border-b border-[#ede6dd] pb-4">
             <div>
                 <h2 class="text-2xl font-bold text-gray-800" id="dashboard-title">Executive Summary</h2>
-                <p class="text-sm text-gray-500 mt-1">Showing data for: <span id="current-filter-label" class="font-semibold text-indigo-600">All Years</span></p>
+                <p class="text-sm text-gray-500 mt-1">Showing data for: <span id="current-filter-label" class="font-semibold text-[#7A5C3A]">All Years</span></p>
             </div>
             <div class="text-right flex flex-col items-end">
-                <span class="text-xs font-semibold bg-green-100 text-green-800 px-2.5 py-0.5 rounded border border-green-200">
+                <span class="text-xs font-semibold bg-[#f5efe6] text-[#61492F] px-2.5 py-0.5 rounded-full border border-[#e5dcce]">
                     <i class="fa-solid fa-database mr-1"></i> Loaded: <span id="total-records">0</span> records
                 </span>
                 <span class="text-[10px] text-gray-400 mt-1">Source: Local JSON</span>
@@ -79,86 +80,87 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-[#ede6dd] flex items-center justify-between hover:shadow-md transition">
                 <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Total Participants</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-participants">0</h3></div>
-                <div class="p-3 bg-blue-50 text-blue-600 rounded-lg"><i class="fa-solid fa-users text-xl"></i></div>
+                <div class="p-3 bg-[#fbf4eb] text-[#7A5C3A] rounded-xl"><i class="fa-solid fa-users text-xl"></i></div>
             </div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-[#ede6dd] flex items-center justify-between hover:shadow-md transition">
                 <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Presentations</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-presentations">0</h3></div>
-                <div class="p-3 bg-yellow-50 text-yellow-600 rounded-lg"><i class="fa-solid fa-person-chalkboard text-xl"></i></div>
+                <div class="p-3 bg-[#fdf6e7] text-[#b47b2b] rounded-xl"><i class="fa-solid fa-person-chalkboard text-xl"></i></div>
             </div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-[#ede6dd] flex items-center justify-between hover:shadow-md transition">
                 <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Countries</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-countries">0</h3></div>
-                <div class="p-3 bg-green-50 text-green-600 rounded-lg"><i class="fa-solid fa-earth-americas text-xl"></i></div>
+                <div class="p-3 bg-[#f1f6f1] text-[#4d7c54] rounded-xl"><i class="fa-solid fa-earth-americas text-xl"></i></div>
             </div>
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-[#ede6dd] flex items-center justify-between hover:shadow-md transition">
                 <div><p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Institutions</p><h3 class="text-3xl font-bold text-gray-800 mt-1" id="kpi-institutions">0</h3></div>
-                <div class="p-3 bg-purple-50 text-purple-600 rounded-lg"><i class="fa-solid fa-building-columns text-xl"></i></div>
+                <div class="p-3 bg-[#f5f2ee] text-[#61492F] rounded-xl"><i class="fa-solid fa-building-columns text-xl"></i></div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-[#ede6dd] p-6">
                 <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-id-card text-blue-500"></i> Participant Status
+                    <i class="fa-solid fa-id-card text-[#7A5C3A]"></i> Participant Status
                 </h3>
                 <div id="status_chart_div" class="chart-container"></div>
             </div>
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-[#ede6dd] p-6">
                 <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-microphone-lines text-yellow-500"></i> Role in Conference
+                    <i class="fa-solid fa-microphone-lines text-[#b47b2b]"></i> Role in Conference
                 </h3>
                 <div id="role_chart_div" class="chart-container"></div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-[#ede6dd] p-6">
                 <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
-                    <i id="dynamic_academic_icon" class="fa-solid fa-graduation-cap text-green-500"></i> 
+                    <i id="dynamic_academic_icon" class="fa-solid fa-graduation-cap text-[#4d7c54]"></i> 
                     <span id="dynamic_academic_title">Academic Profile</span>
                 </h3>
                 <div id="academic_chart_div" class="chart-container"></div>
             </div>
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-[#ede6dd] p-6">
                 <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-ranking-star text-orange-500"></i> Participating Institutions
+                    <i class="fa-solid fa-ranking-star text-[#7A5C3A]"></i> Participating Institutions
                 </h3>
                 <div id="affil_chart_div" class="chart-container"></div>
             </div>
         </div>
 
-        <div id="trend_section" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+        <div id="trend_section" class="bg-white rounded-2xl shadow-sm border border-[#ede6dd] p-6">
             <h3 class="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-chart-line text-indigo-500"></i> Historical Attendance Trend
+                <i class="fa-solid fa-chart-line text-[#7A5C3A]"></i> Historical Attendance Trend
             </h3>
             <div id="trend_chart_div" class="chart-container" style="height: 350px;"></div>
         </div>
 
-        <div id="keynote_section" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hidden-section">
+        <div id="keynote_section" class="bg-white rounded-2xl shadow-sm border border-[#ede6dd] p-6 hidden-section">
             <h3 class="text-lg font-bold text-gray-700 mb-4 flex justify-between items-center">
-                <span class="flex items-center gap-2"><i class="fa-solid fa-star text-purple-500"></i> Keynote Speakers</span>
-                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full" id="table-count">0 found</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-star text-[#b47b2b]"></i> Keynote Speakers</span>
+                <span class="text-xs bg-[#f5efe6] text-[#61492F] px-2.5 py-1 rounded-full font-medium border border-[#e5dcce]" id="table-count">0 found</span>
             </h3>
-            <div class="overflow-y-auto custom-scrollbar border rounded-lg max-h-[400px]">
+            <div class="overflow-y-auto custom-scrollbar border border-[#ede6dd] rounded-xl max-h-[400px]">
                 <table class="min-w-full text-sm text-left text-gray-500">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0 shadow-sm z-10">
+                    <thead class="text-xs text-[#4E3A29] uppercase bg-[#fbf9f6] sticky top-0 shadow-sm z-10 border-b border-[#ede6dd]">
                         <tr>
-                            <th class="px-4 py-3 bg-gray-50">Name</th>
-                            <th class="px-4 py-3 bg-gray-50">Institution</th>
-                            <th class="px-4 py-3 bg-gray-50">Country</th>
+                            <th class="px-4 py-3 bg-[#fbf9f6]">Name</th>
+                            <th class="px-4 py-3 bg-[#fbf9f6]">Institution</th>
+                            <th class="px-4 py-3 bg-[#fbf9f6]">Country</th>
                         </tr>
                     </thead>
-                    <tbody id="keynote-table-body" class="divide-y divide-gray-100 bg-white"></tbody>
+                    <tbody id="keynote-table-body" class="divide-y divide-[#f0eae1] bg-white"></tbody>
                 </table>
             </div>
         </div>
 
     </main>
 
-    <footer class="site-footer" style="margin-top: 3rem;">
-        <div class="site-footer-inner text-center">
+    <footer class="site-footer" style="max-width: var(--container-xl); margin-top: 3rem;">
+        <div class="site-footer-inner">
              <p>© <span id="y"></span> International Conference of Young Algebraists in Thailand</p>
+             <p class="right">cyat.th[at]gmail[dot]com</p>
         </div>
     </footer>
 
@@ -225,7 +227,7 @@
                 
                 // สลับ Title และ Icon เป็น Retention
                 document.getElementById('dynamic_academic_title').innerText = 'Participant Retention';
-                document.getElementById('dynamic_academic_icon').className = 'fa-solid fa-user-clock text-purple-500';
+                document.getElementById('dynamic_academic_icon').className = 'fa-solid fa-user-clock text-[#7A5C3A]';
                 
                 drawRetentionChart();
                 drawTrendChart();
@@ -235,7 +237,7 @@
                 
                 // สลับ Title และ Icon กลับเป็น Academic Profile
                 document.getElementById('dynamic_academic_title').innerText = 'Academic Profile';
-                document.getElementById('dynamic_academic_icon').className = 'fa-solid fa-graduation-cap text-green-500';
+                document.getElementById('dynamic_academic_icon').className = 'fa-solid fa-graduation-cap text-[#4d7c54]';
                 
                 drawAcademicProfileChart(filteredData);
                 populateKeynoteTable(filteredData);
@@ -276,7 +278,7 @@
                 ['Other (e.g. Keynote)', counts['Other']]
             ];
             
-            const opts = { pieHole: 0.4, colors: ['#3b82f6', '#10b981', '#94a3b8'], chartArea: {width:'90%', height:'80%'}, legend: {position: 'bottom'} };
+            const opts = { pieHole: 0.4, colors: ['#7A5C3A', '#4d7c54', '#cbd5e1'], chartArea: {width:'90%', height:'80%'}, legend: {position: 'bottom'} };
             new google.visualization.PieChart(document.getElementById('status_chart_div')).draw(google.visualization.arrayToDataTable(rows), opts);
         }
 
@@ -296,10 +298,10 @@
 
             const rows = [
                 ['Title', 'Count', { role: 'style' }],
-                ['Prof.', counts['Professor'], '#b91c1c'],
-                ['Assoc. Prof.', counts['Assoc. Prof.'], '#ea580c'],
-                ['Asst. Prof.', counts['Asst. Prof.'], '#f59e0b'],
-                ['Student/Other', counts['Student/Other'], '#3b82f6']
+                ['Prof.', counts['Professor'], '#8c3535'],
+                ['Assoc. Prof.', counts['Assoc. Prof.'], '#7A5C3A'],
+                ['Asst. Prof.', counts['Asst. Prof.'], '#b47b2b'],
+                ['Student/Other', counts['Student/Other'], '#9ca3af']
             ];
 
             const dt = google.visualization.arrayToDataTable(rows);
@@ -317,7 +319,7 @@
             const attendees = data.length - presenters;
             const rows = [['Role', 'Count'], ['Presenter (Talk)', presenters], ['Attendee (Listen only)', attendees]];
             
-            const opts = { pieHole: 0.6, colors: ['#f59e0b', '#cbd5e1'], chartArea: {width:'90%', height:'80%'}, legend: {position: 'bottom'} };
+            const opts = { pieHole: 0.6, colors: ['#b47b2b', '#e2d9cd'], chartArea: {width:'90%', height:'80%'}, legend: {position: 'bottom'} };
             new google.visualization.PieChart(document.getElementById('role_chart_div')).draw(google.visualization.arrayToDataTable(rows), opts);
         }
 
@@ -346,7 +348,7 @@
             const dt = google.visualization.arrayToDataTable(rows);
             const opts = { 
                 pieHole: 0.5, 
-                colors: ['#cbd5e1', '#8b5cf6'], // สีเทา(มาครั้งเดียว) กับ สีม่วง(กลับมาอีก)
+                colors: ['#e2d9cd', '#7A5C3A'], // สีครีมเทา(มาครั้งเดียว) กับ สีน้ำตาลอบอุ่น(กลับมาอีก)
                 chartArea: {width:'90%', height:'80%'}, 
                 legend: {position: 'bottom'} 
             };
@@ -362,7 +364,7 @@
             let sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8); 
             
             const rows = [['Institution', 'Participants', { role: 'style' }]];
-            const colors = ['#f97316', '#fb923c', '#fdba74', '#fed7aa', '#ffedd5', '#fff7ed', '#f8fafc', '#f1f5f9'];
+            const colors = ['#7A5C3A', '#8f6e49', '#a4815a', '#b9956c', '#cca980', '#dfbf97', '#ebd2b4', '#f5e4cf'];
             sorted.forEach((item, index) => { rows.push([item[0], item[1], colors[index] || '#cbd5e1']); });
 
             if (rows.length <= 1) { document.getElementById('affil_chart_div').innerHTML = '<div class="flex items-center justify-center h-full text-gray-400">No affiliation data</div>'; return; }
@@ -393,7 +395,7 @@
             const dt = google.visualization.arrayToDataTable(rows);
             const opts = { 
                 isStacked: true, 
-                colors: ['#f59e0b', '#cbd5e1'], 
+                colors: ['#7A5C3A', '#e2d9cd'], 
                 legend: { position: 'top' }, 
                 chartArea: {width: '85%', height: '70%'},
                 vAxis: { minValue: 0, title: 'Number of Participants' }
@@ -431,11 +433,11 @@
             
             allKeynotes.forEach(k => {
                 const tr = document.createElement('tr');
-                tr.className = "hover:bg-indigo-50 transition duration-150";
+                tr.className = "hover:bg-[#fcfaf7] transition duration-150";
                 tr.innerHTML = `
                     <td class="px-4 py-3 font-medium text-gray-900">${k.name}</td>
                     <td class="px-4 py-3">${k.affiliation}</td>
-                    <td class="px-4 py-3"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">${k.country}</span></td>
+                    <td class="px-4 py-3"><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#f5efe6] text-[#61492F] border border-[#e5dcce]">${k.country}</span></td>
                 `;
                 tbody.appendChild(tr);
             });
